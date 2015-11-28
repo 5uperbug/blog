@@ -1,3 +1,8 @@
+title: shakshuka (North African Poached Eggs)
+date: 2015-11-28 10:48:11
+tags:
+---
+![shakshuka](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
 ## What you need
 - Olive oil (to fry)
 - 1 egg
@@ -13,10 +18,10 @@
 
 ## How to
 - Heat a little olive oil in a pan. Add the cumin and fry, making sure you don't burn it. Be gentle! Sweat the onions for a couple of minutes till they become translucent.
-- Add the peppers to the pan and fry till they soften. Now add the tomatoes and season, cook till the tomtaoes collapse. Add 2-4 tablespoons of water it the tomatoes are on the dry side. Check and adjust the seasoning.
-- Add the apritcots. You can also add a little oregano (optional).
+- Add the peppers to the pan and fry till they soften. Now add the tomatoes and season, cook till the tomatoes collapse. Add 2-4 tablespoons of water it the tomatoes are on the dry side. Check and adjust the seasoning.
+- Add the apricots. You can also add a little oregano (optional).
 - Make a well for the egg to go into. Crack the egg into a small bowl and then drop it into the well. Season the egg and cover the pan till the egg is cooked.
 
 ## Serving 
 - Garnish with chopped coriander
-- Serve hot with tosted bread
+- Serve hot with toasted bread
