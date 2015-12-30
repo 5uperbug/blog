@@ -18,7 +18,7 @@ tags:
 - Salt and pepper to taste
 - 4 dried apricots (thinly sliced)
 
-## How to
+## Method
 - Heat a little olive oil in a pan. Add the cumin and fry, making sure you don't burn it. Be gentle! Sweat the onions for a couple of minutes till they become translucent.
 - Add the peppers to the pan and fry till they soften. Now add the tomatoes and season, cook till the tomatoes collapse. Add 2-4 tablespoons of water it the tomatoes are on the dry side. Check and adjust the seasoning.
 - Add the apricots. You can also add a little oregano (optional).
