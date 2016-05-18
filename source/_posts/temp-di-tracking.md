@@ -1,7 +1,7 @@
 Have you ever wanted to track guitar and bass tracks that sound good, but can be achieved on an cheap budget with equipment you might already have lying around? 
 In this post I'll explain how I went about trying to answer this same question and got decent results using DI (Direct Inject) tracks as a base. 
 
-DI tracks can then be used to re-amp or use with plugins to make your guitar/bass to sound awesome. They also provide you the flexibility of not committing to a sound while recording and let you focus on the tracking process.
+DI tracks can then be used to [re-amp](https://en.wikipedia.org/wiki/Re-amp) or use with plugins to make your guitar/bass to sound awesome. They also provide you the flexibility of not committing to a sound while recording and let you focus on the tracking process.
 
 ## Things needed
 
