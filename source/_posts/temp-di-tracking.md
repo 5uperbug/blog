@@ -22,6 +22,6 @@ DI tracks can then be used to [re-amp](https://en.wikipedia.org/wiki/Re-amp) or 
   + Connect this processor to an amp/speaker via the output jack.
   + Mute monitoring on the armed track and use the second processor in the chain for your effects only for monitoring.
 
-*Stay tuned for more poor man tricks/hacks to track decent guitar/bass tracks!*
+*Stay tuned for more poor man tricks/hacks to record decent guitar/bass tracks!*
 
 Stay fab ♥
