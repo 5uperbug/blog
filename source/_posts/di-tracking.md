@@ -1,3 +1,9 @@
+title: Recording DI tracks on a budget
+date: 2016-05-28 10:48:11
+tags: 
+	- production
+	- music
+---
 Have you ever wanted to record guitar and bass tracks that sound good and can be achieved on an cheap budget with equipment you might already have lying around? 
 In this post I'll explain how I went about trying to answer this same question and got decent results using DI (Direct Inject) tracks to build a production. 
 
