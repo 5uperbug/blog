@@ -22,5 +22,6 @@ $ npm config set proxy http://proxy.company.com:8080
 $ npm config set https-proxy http://proxy.company.com:8080
 $ npm config set strict-ssl false
 ```
+An additional step that may come in handy if certain packages throw SSL tunneling errors is ```npm config set registry http://registry.npmjs.org/```
 
 Stay fab ♥
