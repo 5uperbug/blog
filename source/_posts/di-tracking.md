@@ -27,6 +27,7 @@ DI tracks can then be used to [re-amp](https://en.wikipedia.org/wiki/Re-amp) or 
   + Take a line out from the FX processor and connect it to the input of another processor.
   + Connect this processor to an amp/speaker via the output jack.
   + Mute monitoring on the armed track and use the second processor in the chain for your effects only for monitoring.
+<img src="https://67.media.tumblr.com/2793a045dd8abc0a38429324cbf45691/tumblr_od2mlqody31upui14o1_1280.png">
 
 *Stay tuned for more poor man tricks/hacks to record decent guitar/bass tracks!*
 
