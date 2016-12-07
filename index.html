@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>5uperbug</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Demo...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="5uperbug">
+<meta property="og:url" content="http://blog.5uperbug.com/index.html">
+<meta property="og:site_name" content="5uperbug">
+<meta property="og:description" content="Demo...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="5uperbug">
+<meta name="twitter:description" content="Demo...">
+  
+    <link rel="alternative" href="/atom.xml" title="5uperbug" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">5uperbug</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Rambling...</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <!-- <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav> -->
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.5uperbug.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-npm-proxy" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/14/npm-proxy/" class="article-date">
+  <time datetime="2016-06-14T05:30:00.000Z" itemprop="datePublished">2016-06-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/14/npm-proxy/">Setting Up NPM Behind a Corporate Firewall</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Once upon a time, I urgently needed to setup a simple <a href="https://www.npmjs.com/package/http-server" target="_blank" rel="external">http server</a> to quickly try out some code at work. I proceeded to install <a href="https://nodejs.org/" target="_blank" rel="external">nodejs</a>, <a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a> and then ran <code>$ npm install http-server -g</code></p>
+<p>Unfortunately it wasn’t going to be that easy. The corporate firewall was proving to be a real pain. A little search on the interwebs revealed that entries can be made into the config file via <code>npm config set</code>.</p>
+<p>These are the steps to set the http and https proxies in the config file</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm config set proxy <span class="link">http://</span>[<span class="string">proxy address</span>]:[port]</div><div class="line">$ npm config set https-proxy <span class="link">http://</span>[<span class="string">proxy address</span>]:[port]</div><div class="line">$ npm config set strict-ssl false</div></pre></td></tr></table></figure>
+<h5 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h5><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span> npm config <span class="keyword">set</span> proxy <span class="comment">http:</span>//<span class="comment">proxy.company.com:8080</span></div><div class="line">$ npm <span class="comment">config set https-proxy http:</span>//<span class="comment">proxy.company.com:8080</span></div><div class="line">$ npm <span class="comment">config set strict-ssl false</span></div></pre></td></tr></table></figure>
+<p>An additional step that may come in handy if certain packages throw SSL tunneling errors is <code>npm config set registry http://registry.npmjs.org/</code></p>
+<p>Stay fab ♥</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.5uperbug.com/2016/06/14/npm-proxy/" data-id="ciwescgpz000386pew13pmfqs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/development/">development</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-di-tracking" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/28/di-tracking/" class="article-date">
+  <time datetime="2016-05-28T05:18:11.000Z" itemprop="datePublished">2016-05-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/28/di-tracking/">Recording DI Tracks on a Budget</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Have you ever wanted to record guitar and bass tracks that sound good while on an cheap budget with equipment you might already have lying around? </p>
+<p>In this post I’ll explain how I went about trying to answer this same question and got decent results using DI (Direct Inject) tracks to build a production. </p>
+<p>DI tracks can then be used to <a href="https://en.wikipedia.org/wiki/Re-amp" target="_blank" rel="external">re-amp</a> or use with plugins to make your guitar/bass sound awesome. They also provide you the flexibility of not committing to a sound while recording and let you focus on the tracking process.</p>
+<h2 id="Things-needed"><a href="#Things-needed" class="headerlink" title="Things needed"></a>Things needed</h2><ul>
+<li>Guitar/Bass</li>
+<li>An effects processor with a built in USB interface (example: <a href="https://www.zoom.co.jp/products/guitar/g3-guitar-effects-amp-simulator-pedal" target="_blank" rel="external">Zoom G3</a>)</li>
+<li>Cables (Instrument and USB)</li>
+<li>DAW installed on machine</li>
+<li>Another guitar FX Processor and amp to monitor (Optional)</li>
+</ul>
+<h2 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h2><ul>
+<li>Connect your effects processor to your computer and setup your audio device drivers with your DAW. <a href="http://www.asio4all.com" target="_blank" rel="external">ASIO4ALL</a> is a good starting point if your device doesn’t come with drivers.</li>
+<li>Connect your guitar/bass to the input of the USB enabled processor and bypass all effects/modelling.</li>
+<li>Arm a track and play your instrument and make sure the signal is loud enough but not clipping. Alternately you could save a patch with the levels set and recall this whenever you track.</li>
+<li>You can now record DI tracks on your DAW which can be used to re-amp or use plugins.</li>
+<li>Optional steps for foolproof, latency free, rock star like monitoring<ul>
+<li>Take a line out from the FX processor and connect it to the input of another processor.</li>
+<li>Connect this processor to an amp/speaker via the output jack.</li>
+<li>Mute monitoring on the armed track and use the second processor in the chain for your effects only for monitoring.<br><img src="https://67.media.tumblr.com/2793a045dd8abc0a38429324cbf45691/tumblr_od2mlqody31upui14o1_1280.png"></li>
+</ul>
+</li>
+</ul>
+<p><em>Stay tuned for more poor man tricks/hacks to record decent guitar/bass tracks!</em></p>
+<p>Stay fab ♥</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.5uperbug.com/2016/05/28/di-tracking/" data-id="ciwescgpl000086pef9bn3ksq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/">music</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/production/">production</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-shakshuka" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/28/shakshuka/" class="article-date">
+  <time datetime="2015-11-28T05:18:11.000Z" itemprop="datePublished">2015-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/28/shakshuka/">Shakshuka (North African Poached Eggs)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://36.media.tumblr.com/be5eb256a8f17f117d02637941e6987c/tumblr_nyquoc1FcI1upui14o1_540.jpg"></p>
+<h2 id="What-you-need"><a href="#What-you-need" class="headerlink" title="What you need"></a>What you need</h2><ul>
+<li>Olive oil (to fry)</li>
+<li>1 egg</li>
+<li>1 tsp cumin seeds</li>
+<li>2 cloves garlic (thinly sliced)</li>
+<li>1 onion (diced)</li>
+<li>1/2 red pepper/capsicum  (deseeded and sliced)</li>
+<li>1/2 green pepper/capsicum  (deseeded and sliced)</li>
+<li>1 tsp red chilli flakes (add more if you like heat)</li>
+<li>2 tomatoes (diced, salt a little sugar if it’s sour)</li>
+<li>Salt and pepper to taste</li>
+<li>4 dried apricots (thinly sliced)</li>
+</ul>
+<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><ul>
+<li>Heat a little olive oil in a pan. Add the cumin and fry, making sure you don’t burn it. Be gentle! Sweat the onions for a couple of minutes till they become translucent.</li>
+<li>Add the peppers to the pan and fry till they soften. Now add the tomatoes and season, cook till the tomatoes collapse. Add 2-4 tablespoons of water if the tomatoes are on the dry side. Check and adjust the seasoning.</li>
+<li>Add the apricots. You can also add a little oregano (optional).</li>
+<li>Make a well for the egg to go into. Crack the egg into a small bowl and then drop it into the well. Season the egg and cover the pan till the egg is cooked.</li>
+</ul>
+<h2 id="Serving"><a href="#Serving" class="headerlink" title="Serving"></a>Serving</h2><ul>
+<li>Garnish with chopped coriander</li>
+<li>Serve hot with toasted bread</li>
+</ul>
+<p>Stay fab ♥</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.5uperbug.com/2015/11/28/shakshuka/" data-id="ciwescgq2000486pe1wxofb7o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cooking/">cooking</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/recipe/">recipe</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/22/hello-world/" class="article-date">
+  <time datetime="2015-11-22T11:27:03.000Z" itemprop="datePublished">2015-11-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/22/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hey there! I’m Aby aka <a href="https://soundcloud.com/5uperbug" target="_blank" rel="external">5uperbug</a>(pronounced Superbug). This is a customary Hello World post. </p>
+<p>This blog is me rambling about things that are close to my heart i.e, computer science, music production, guitars, food, photography and random puns maybe?</p>
+<p>This blog(as of writing this) is written using <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank" rel="external">Markdown</a>, generated as a static site via <a href="https://hexo.io" target="_blank" rel="external">Hexo</a> (Have I mentioned that I ♥ Javascript?) and hosted using <a href="https://pages.github.com" target="_blank" rel="external">Github Pages</a>.</p>
+<p>Stay tuned for more, or maybe don’t. This may not even be worth it :P</p>
+<p>Stay fab ♥</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.5uperbug.com/2015/11/22/hello-world/" data-id="ciwescgpq000186pe5xigt0s2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rambling/">rambling</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cooking/">cooking</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/development/">development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/">music</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/production/">production</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rambling/">rambling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recipe/">recipe</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/cooking/" style="font-size: 10px;">cooking</a> <a href="/tags/development/" style="font-size: 10px;">development</a> <a href="/tags/music/" style="font-size: 10px;">music</a> <a href="/tags/production/" style="font-size: 10px;">production</a> <a href="/tags/rambling/" style="font-size: 10px;">rambling</a> <a href="/tags/recipe/" style="font-size: 10px;">recipe</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/06/14/npm-proxy/">Setting Up NPM Behind a Corporate Firewall</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/28/di-tracking/">Recording DI Tracks on a Budget</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/28/shakshuka/">Shakshuka (North African Poached Eggs)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/22/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Aby Ben Rajan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

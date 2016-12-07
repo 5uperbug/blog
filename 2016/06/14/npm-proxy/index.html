@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Setting Up NPM Behind a Corporate Firewall | 5uperbug</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Once upon a time, I urgently needed to setup a simple http server to quickly try out some code at work. I proceeded to install nodejs, npm and then ran $ npm install http-server -g
+Unfortunately it wa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Setting Up NPM Behind a Corporate Firewall">
+<meta property="og:url" content="http://blog.5uperbug.com/2016/06/14/npm-proxy/index.html">
+<meta property="og:site_name" content="5uperbug">
+<meta property="og:description" content="Once upon a time, I urgently needed to setup a simple http server to quickly try out some code at work. I proceeded to install nodejs, npm and then ran $ npm install http-server -g
+Unfortunately it wa">
+<meta property="og:updated_time" content="2016-12-07T10:23:03.669Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Setting Up NPM Behind a Corporate Firewall">
+<meta name="twitter:description" content="Once upon a time, I urgently needed to setup a simple http server to quickly try out some code at work. I proceeded to install nodejs, npm and then ran $ npm install http-server -g
+Unfortunately it wa">
+  
+    <link rel="alternative" href="/atom.xml" title="5uperbug" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">5uperbug</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Rambling...</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <!-- <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav> -->
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.5uperbug.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-npm-proxy" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/14/npm-proxy/" class="article-date">
+  <time datetime="2016-06-14T05:30:00.000Z" itemprop="datePublished">2016-06-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Setting Up NPM Behind a Corporate Firewall
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Once upon a time, I urgently needed to setup a simple <a href="https://www.npmjs.com/package/http-server" target="_blank" rel="external">http server</a> to quickly try out some code at work. I proceeded to install <a href="https://nodejs.org/" target="_blank" rel="external">nodejs</a>, <a href="https://www.npmjs.com/" target="_blank" rel="external">npm</a> and then ran <code>$ npm install http-server -g</code></p>
+<p>Unfortunately it wasn’t going to be that easy. The corporate firewall was proving to be a real pain. A little search on the interwebs revealed that entries can be made into the config file via <code>npm config set</code>.</p>
+<p>These are the steps to set the http and https proxies in the config file</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm config set proxy <span class="link">http://</span>[<span class="string">proxy address</span>]:[port]</div><div class="line">$ npm config set https-proxy <span class="link">http://</span>[<span class="string">proxy address</span>]:[port]</div><div class="line">$ npm config set strict-ssl false</div></pre></td></tr></table></figure>
+<h5 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h5><figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span> npm config <span class="keyword">set</span> proxy <span class="comment">http:</span>//<span class="comment">proxy.company.com:8080</span></div><div class="line">$ npm <span class="comment">config set https-proxy http:</span>//<span class="comment">proxy.company.com:8080</span></div><div class="line">$ npm <span class="comment">config set strict-ssl false</span></div></pre></td></tr></table></figure>
+<p>An additional step that may come in handy if certain packages throw SSL tunneling errors is <code>npm config set registry http://registry.npmjs.org/</code></p>
+<p>Stay fab ♥</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.5uperbug.com/2016/06/14/npm-proxy/" data-id="ciwescgpz000386pew13pmfqs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/development/">development</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/28/di-tracking/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Recording DI Tracks on a Budget</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cooking/">cooking</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/development/">development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/">music</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/production/">production</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rambling/">rambling</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recipe/">recipe</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/cooking/" style="font-size: 10px;">cooking</a> <a href="/tags/development/" style="font-size: 10px;">development</a> <a href="/tags/music/" style="font-size: 10px;">music</a> <a href="/tags/production/" style="font-size: 10px;">production</a> <a href="/tags/rambling/" style="font-size: 10px;">rambling</a> <a href="/tags/recipe/" style="font-size: 10px;">recipe</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/06/14/npm-proxy/">Setting Up NPM Behind a Corporate Firewall</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/28/di-tracking/">Recording DI Tracks on a Budget</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/28/shakshuka/">Shakshuka (North African Poached Eggs)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/22/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Aby Ben Rajan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
